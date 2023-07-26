@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventlistner</title>
+</head>
+<body>
+    <h1>Learning event listner</h1>
+    <p>Event Listner</p>
+
+    <script>
+        document.addEventListener("dblclick",hello)
+        function hello(){
+            document.getElementById("js").innerText="mouse cilcked"
+        }
+
+        document.addEventListener("mouseenter",hellothere)
+        function hellothere(){
+            document.getElementById("js").innerText="mouse realised"
+        }
+
+    </script>
+</body>
+</html>

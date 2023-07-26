@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-Dom</title>
+</head>
+<body>
+    <h1>Hello Everyone</h1>
+    <ul></ul>
+    <button onclick="maths()" id="fsjs">Submit</button>
+    <p id="js"></p>
+    <script>
+        const list= `
+        <li>abc</li>
+        <li>pqr</li>
+        <li>xyz</li>
+        <li>def</li>`;
+        const ul= document.querySelector("ul")
+        ul.innerHTML=list;
+
+        // create h1 on screeen
+
+        let title = document.createElement("h1")
+        title.classsName="title";
+        title.style.fontSize = "25px";
+        title.style.color="green";
+        title.textContent="creating new element with DOM";
+        console.log(title)
+        document.body.appendChild(title)
+
+        // using for loop
+
+        for (let i=0; i<3; i++) {
+            let para=document.createElement("p")
+            para.className="FullStack";
+            para.style.fontSize="25px";
+            para.style.color="red";
+            para.textContent=i;
+            console.log(para)
+            document.body.appendChild(para)
+        }
+
+        function maths(){
+             let value = prompt("solve this first 50-16");
+             if(value==34){
+                document.getElementById("js").innerText ="Success";
+                document.getElementById("fsjs").style.backgroundColor="green"
+             }
+             else{
+                document.getElementById("js").innerText ="Failed";
+                document.getElementById("fsjs").style.backgroundColor="red"
+             }
+        }
+
+
+
+    </script>
+</body>
+</html>
